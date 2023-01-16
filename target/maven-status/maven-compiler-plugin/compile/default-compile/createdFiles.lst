@@ -1,0 +1,15 @@
+com\university\universityapplication_erfanadine\repository\LessonRepo.class
+com\university\universityapplication_erfanadine\repository\FoodWeekRepo.class
+com\university\universityapplication_erfanadine\repository\StudentRepo.class
+com\university\universityapplication_erfanadine\repository\BookRepo.class
+com\university\universityapplication_erfanadine\entity\Lesson.class
+com\university\universityapplication_erfanadine\entity\Days.class
+com\university\universityapplication_erfanadine\entity\Student.class
+com\university\universityapplication_erfanadine\entity\Teacher.class
+com\university\universityapplication_erfanadine\UniversityApplicationErfanAdineApplication.class
+com\university\universityapplication_erfanadine\entity\BaseEntity.class
+com\university\universityapplication_erfanadine\entity\Wallet.class
+com\university\universityapplication_erfanadine\entity\BaseInformation.class
+com\university\universityapplication_erfanadine\entity\Book.class
+com\university\universityapplication_erfanadine\entity\UnitOfUniversity.class
+com\university\universityapplication_erfanadine\entity\FoodWeek.class
