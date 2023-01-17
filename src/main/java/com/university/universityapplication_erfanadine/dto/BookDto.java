@@ -11,6 +11,9 @@ public class BookDto extends BaseEntityDto {
     private String bookName;
     private String mainLanguage;
     private String printYear;
-    private Lesson lesson;
+    private Long lessonId;
 
 }
+
+
+

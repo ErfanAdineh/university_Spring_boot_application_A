@@ -21,10 +21,13 @@ public interface BookRepo extends JpaRepository<Book, Long> {
     List<Book> findByBookName(String bookName, Pageable pageable);
 
 
-    @Modifying
-    @Query("update Book b set b.bookName = :bookName, b.mainLanguage = :mainLanguage, b.printYear = :printYear, b.lesson = :lesson where b.id = :id")
-    int update(@Param("bookName") String bookName, @Param("mainLanguage") String mainLanguage, @Param("printYear") String printYear, @Param("lesson") Lesson lesson, @Param("id") Long id);
+//    @Modifying
+//    @Query("update Book b set b.bookName = :bookName, b.mainLanguage = :mainLanguage, b.printYear = :printYear, b.lesson = :lesson where b.id = :id")
+//    int update(@Param("bookName") String bookName, @Param("mainLanguage") String mainLanguage, @Param("printYear") String printYear, @Param("lesson") Lesson lesson, @Param("id") Long id);
+//
 
-//    @Query("select b from Book b where b.id = ?1")
-//    Book findById(Long bookId);
+    @Modifying
+    @Query("update Book b set b.bookName = :bookName, b.mainLanguage = :mainLanguage, b.printYear = :printYear where b.id = :id")
+    int update(@Param("bookName") String bookName, @Param("mainLanguage") String mainLanguage, @Param("printYear") String printYear, @Param("id") Long id);
+
 }

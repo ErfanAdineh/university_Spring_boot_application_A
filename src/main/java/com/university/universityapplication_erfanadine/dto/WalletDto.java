@@ -11,6 +11,6 @@ import java.math.BigInteger;
 public class WalletDto extends BaseEntityDto {
 
     private BigInteger cash;
-    private Student student;
+    private Long studentId;
 
 }

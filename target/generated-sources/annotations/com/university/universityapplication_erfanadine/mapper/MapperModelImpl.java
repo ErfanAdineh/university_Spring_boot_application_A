@@ -20,7 +20,7 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-01-17T16:28:36+0330",
+    date = "2023-01-17T17:01:23+0330",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.5 (Oracle Corporation)"
 )
 public class MapperModelImpl implements MapperModel {
@@ -37,7 +37,6 @@ public class MapperModelImpl implements MapperModel {
         bookDto.setBookName( book.getBookName() );
         bookDto.setMainLanguage( book.getMainLanguage() );
         bookDto.setPrintYear( book.getPrintYear() );
-        bookDto.setLesson( book.getLesson() );
 
         return bookDto;
     }
@@ -54,7 +53,6 @@ public class MapperModelImpl implements MapperModel {
         book.setBookName( bookDto.getBookName() );
         book.setMainLanguage( bookDto.getMainLanguage() );
         book.setPrintYear( bookDto.getPrintYear() );
-        book.setLesson( bookDto.getLesson() );
 
         return book;
     }

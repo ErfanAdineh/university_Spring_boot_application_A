@@ -15,9 +15,9 @@ public class LessonDto extends BaseEntityDto {
 
     private String NameOfCourse;
     private Integer universityCourseUnit;
-    private UnitOfUniversityDto unitOfUniversity;
-    private List<Student> students = new ArrayList<>();
-    private List<Teacher> teachers = new ArrayList<>();
-    private List<Book> books = new ArrayList<>();
+    private Long unitOfUniversity;
+    private List<Long> students_Id = new ArrayList<>();
+    private List<Long> teachers_Id = new ArrayList<>();
+    private List<Long> books_Id = new ArrayList<>();
 
 }

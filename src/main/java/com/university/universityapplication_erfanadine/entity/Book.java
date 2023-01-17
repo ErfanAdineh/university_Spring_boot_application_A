@@ -16,7 +16,7 @@ public class Book extends BaseEntity {
     private String mainLanguage;
     private String printYear;
 
-    @ManyToOne(cascade = CascadeType.DETACH)
+    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
     @JoinColumn(name = "lesson_ID")
     private Lesson lesson;
 

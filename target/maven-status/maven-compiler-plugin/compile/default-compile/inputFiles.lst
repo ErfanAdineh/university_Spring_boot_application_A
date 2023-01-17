@@ -19,6 +19,7 @@ C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\
 C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\repository\FoodWeekRepo.java
 C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\controller\BookController.java
 C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\UniversityApplicationErfanAdineApplication.java
+C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\dto\search\BookFindByName.java
 C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\entity\BaseEntity.java
 C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\dto\BaseInformation.java
 C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\repository\UnitOfUniversityRepo.java
@@ -35,9 +36,9 @@ C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\
 C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\repository\StudentRepo.java
 C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\repository\TeacherRepo.java
 C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\controller\FoodWeekController.java
+C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\dto\search\BookSearch.java
 C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\repository\BookRepo.java
 C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\controller\StudentController.java
 C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\entity\Teacher.java
-C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\repository\BaseRepo.java
 C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\service\BookService.java
 C:\Users\asus\Desktop\New folder\UniversityApplication_ErfanAdine\src\main\java\com\university\universityapplication_erfanadine\repository\WalletRepo.java
