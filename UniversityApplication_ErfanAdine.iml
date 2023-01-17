@@ -33,8 +33,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/target/generated-sources/annotations" isTestSource="false" generated="true" />
-      <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/test" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="jdk" jdkName="17" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -98,7 +98,7 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:3.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:3.0.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.h2database:h2:2.1.214" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: com.mysql:mysql-connector-j:8.0.31" level="project" />
+    <orderEntry type="library" name="Maven: com.mysql:mysql-connector-j:8.0.31" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.24" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-starter-test:3.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test:3.0.1" level="project" />
@@ -129,6 +129,5 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:6.0.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:6.0.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.9.0" level="project" />
-    <orderEntry type="library" name="Maven: org.mapstruct:mapstruct:1.5.3.Final" level="project" />
   </component>
 </module>

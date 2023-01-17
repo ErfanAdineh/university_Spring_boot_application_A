@@ -14,14 +14,12 @@ com\university\universityapplication_erfanadine\dto\WalletDto.class
 com\university\universityapplication_erfanadine\service\FoodWeekService.class
 com\university\universityapplication_erfanadine\repository\UnitOfUniversityRepo.class
 com\university\universityapplication_erfanadine\service\UnitOfUniversityService.class
-com\university\universityapplication_erfanadine\mapper\MapperModel.class
 com\university\universityapplication_erfanadine\repository\TeacherRepo.class
 com\university\universityapplication_erfanadine\entity\Book.class
 com\university\universityapplication_erfanadine\dto\search\BookSearch.class
 com\university\universityapplication_erfanadine\dto\BaseEntityDto.class
 com\university\universityapplication_erfanadine\dto\FoodWeekDto.class
 com\university\universityapplication_erfanadine\repository\StudentRepo.class
-com\university\universityapplication_erfanadine\mapper\MapperModelImpl.class
 com\university\universityapplication_erfanadine\entity\Days.class
 com\university\universityapplication_erfanadine\entity\Student.class
 com\university\universityapplication_erfanadine\dto\BaseInformation.class

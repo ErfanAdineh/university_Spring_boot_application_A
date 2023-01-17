@@ -3,7 +3,6 @@ package com.university.universityapplication_erfanadine.service;
 import com.university.universityapplication_erfanadine.dto.BookDto;
 import com.university.universityapplication_erfanadine.entity.Book;
 import com.university.universityapplication_erfanadine.entity.Lesson;
-import com.university.universityapplication_erfanadine.mapper.MapperModel;
 import com.university.universityapplication_erfanadine.repository.BookRepo;
 import com.university.universityapplication_erfanadine.repository.LessonRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +21,7 @@ public class BookService {
     @Autowired
     private LessonRepo lessonRepo;
 
-    private MapperModel mapperModel;
+//    private MapperModel mapperModel;
 
     public BookDto save(BookDto bookDto) {
         Book save = bookRepo.save(convertBookDtoToBookModel(bookDto));
@@ -46,7 +45,7 @@ public class BookService {
         List<Book> search = bookRepo.search(name, language, printYear, result);
         for (Book book :
                 search) {
-            BookDto bookDto = mapperModel.convertBookModelToBookDto(book);
+            BookDto bookDto = convertBookModelToBookDto(book);
             bookDtoList.add(bookDto);
         }
 
@@ -55,7 +54,7 @@ public class BookService {
 
     public BookDto findById(Long bookId) {
         Book book = bookRepo.findById(bookId).orElseThrow(RuntimeException::new);
-        return mapperModel.convertBookModelToBookDto(book);
+        return convertBookModelToBookDto(book);
     }
 
     public List<BookDto> findByName(String bookName, int page, int size) {
@@ -64,7 +63,7 @@ public class BookService {
         Pageable result = PageRequest.of(page, size);
         List<Book> books = bookRepo.findByBookName(bookName, result);
         for (Book book : books) {
-            BookDto bookDto = mapperModel.convertBookModelToBookDto(book);
+            BookDto bookDto = convertBookModelToBookDto(book);
             bookDtoList.add(bookDto);
         }
 
