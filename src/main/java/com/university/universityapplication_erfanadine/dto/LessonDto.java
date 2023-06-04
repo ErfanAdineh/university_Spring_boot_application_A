@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 public class LessonDto extends BaseEntityDto {
 
-    private String NameOfCourse;
+    private String nameOfCourse;
     private Integer universityCourseUnit;
     private Long unitOfUniversity;
     private List<Long> students_Id = new ArrayList<>();

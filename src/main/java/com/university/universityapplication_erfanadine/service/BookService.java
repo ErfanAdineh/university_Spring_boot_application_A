@@ -21,7 +21,6 @@ public class BookService {
     @Autowired
     private LessonRepo lessonRepo;
 
-//    private MapperModel mapperModel;
 
     public BookDto save(BookDto bookDto) {
         Book save = bookRepo.save(convertBookDtoToBookModel(bookDto));
@@ -30,7 +29,7 @@ public class BookService {
 
     public int update(BookDto book) {
 //        int update = bookRepo.update(book.getBookName(), book.getMainLanguage(), book.getPrintYear(), book.getLesson(), book.getId());
-        int update = bookRepo.update(book.getBookName(), book.getMainLanguage(), book.getPrintYear(),book.getId());
+        int update = bookRepo.update(book.getBookName(), book.getMainLanguage(), book.getPrintYear(), book.getId());
         return update;
     }
 
@@ -71,34 +70,34 @@ public class BookService {
         return bookDtoList;
     }
 
-//*************************************
+    //**************************************************************************
     public Book convertBookDtoToBookModel(BookDto bookDto) {
-        if ( bookDto == null ) {
+        if (bookDto == null) {
             return null;
         }
 
         Book book = new Book();
 
-        book.setId( bookDto.getId() );
-        book.setBookName( bookDto.getBookName() );
-        book.setMainLanguage( bookDto.getMainLanguage() );
-        book.setPrintYear( bookDto.getPrintYear() );
+        book.setId(bookDto.getId());
+        book.setBookName(bookDto.getBookName());
+        book.setMainLanguage(bookDto.getMainLanguage());
+        book.setPrintYear(bookDto.getPrintYear());
         book.setLesson(lessonRepo.findById(bookDto.getLessonId()).orElseGet(Lesson::new));
 
         return book;
     }
 
     public BookDto convertBookModelToBookDto(Book book) {
-        if ( book == null ) {
+        if (book == null) {
             return null;
         }
 
         BookDto bookDto = new BookDto();
 
-        bookDto.setId( book.getId() );
-        bookDto.setBookName( book.getBookName() );
-        bookDto.setMainLanguage( book.getMainLanguage() );
-        bookDto.setPrintYear( book.getPrintYear() );
+        bookDto.setId(book.getId());
+        bookDto.setBookName(book.getBookName());
+        bookDto.setMainLanguage(book.getMainLanguage());
+        bookDto.setPrintYear(book.getPrintYear());
         bookDto.setLessonId(book.getLesson().getId());
 
         return bookDto;

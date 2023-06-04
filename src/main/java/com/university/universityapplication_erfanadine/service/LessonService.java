@@ -31,6 +31,26 @@ public class LessonService {
     @Autowired
     private BookRepo bookRepo;
 
+
+    public LessonDto save(LessonDto lessonDto) {
+        return convertLessonModelToLessonDto(lessonRepo.save(convertLessonDtoToLessonModel(lessonDto)));
+    }
+
+    public LessonDto update(LessonDto lessonDto) {
+        return convertLessonModelToLessonDto(lessonRepo.save(convertLessonDtoToLessonModel(lessonDto)));
+    }
+
+    public LessonDto findById(Long id) {
+        return convertLessonModelToLessonDto(lessonRepo.findById(id).orElseThrow(() ->
+                new RuntimeException("not found lesson by this id : " + id)));
+    }
+
+    public LessonDto findByName(String nameOfCourse) {
+        return convertLessonModelToLessonDto(lessonRepo.findByNameOfCourse(nameOfCourse));
+    }
+
+
+
     public LessonDto convertLessonModelToLessonDto(Lesson lesson) {
 
         List<Long> student_longs = new ArrayList<>();

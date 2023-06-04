@@ -17,6 +17,6 @@ public class StudentDto extends BaseInformation {
 
     private List<Long> lessons_Id = new ArrayList<>();
 
-    private Wallet wallet;
+    private WalletDto wallet;
 
 }

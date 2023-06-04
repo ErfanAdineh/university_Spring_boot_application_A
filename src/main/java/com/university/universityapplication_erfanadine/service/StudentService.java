@@ -25,6 +25,33 @@ public class StudentService {
     @Autowired
     private FoodWeekRepo foodWeekRepo;
 
+    @Autowired
+    private WalletService walletService;
+    private Long studentId;
+
+
+    public StudentDto save(StudentDto lessonDto) {
+        Student student = studentRepo.save(convertStudentDtoToStudentModel(lessonDto));
+        studentId = student.getId();
+        return convertStudentModelToStudentDto(student);
+    }
+
+    public StudentDto update(StudentDto lessonDto) {
+        return convertStudentModelToStudentDto(studentRepo.save(convertStudentDtoToStudentModel(lessonDto)));
+    }
+
+    public StudentDto findById(Long id) {
+        return convertStudentModelToStudentDto(studentRepo.findById(id).orElseThrow(() ->
+                new RuntimeException("not found student by this id : " + id)));
+    }
+
+    public StudentDto findByName(String firstName, String lastName) {
+        return convertStudentModelToStudentDto(studentRepo.findByFirstNameAndLastName(firstName, lastName));
+
+//                .orElseThrow(() ->
+//                new RuntimeException("not found student by this full firstName : " + firstName + " lastName : " + lastName))
+    }
+
 
     public StudentDto convertStudentModelToStudentDto(Student student) {
 
@@ -58,8 +85,8 @@ public class StudentService {
             studentDto.setLessons_Id(lessons_Longs);
         }
 
-
-        studentDto.setWallet(student.getWallet());
+        student.getWallet().setStudent(student);
+        studentDto.setWallet(walletService.convertWalletModelToWalletDto(student.getWallet()));
 
         return studentDto;
     }
@@ -95,8 +122,8 @@ public class StudentService {
             }
             student.setLessons(lessons);
         }
-
-        student.setWallet(studentDto.getWallet());
+        studentDto.getWallet().setStudentId(studentId);
+        student.setWallet(walletService.convertWalletDtoToWalletModel(studentDto.getWallet()));
 
         return student;
     }

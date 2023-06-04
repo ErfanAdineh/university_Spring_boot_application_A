@@ -6,6 +6,7 @@ import com.university.universityapplication_erfanadine.entity.Teacher;
 import com.university.universityapplication_erfanadine.entity.UnitOfUniversity;
 import com.university.universityapplication_erfanadine.repository.LessonRepo;
 import com.university.universityapplication_erfanadine.repository.TeacherRepo;
+import com.university.universityapplication_erfanadine.repository.UnitOfUniversityRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +21,41 @@ public class UnitOfUniversityService {
 
     @Autowired
     private TeacherRepo teacherRepo;
+
+
+
+    @Autowired
+    public UnitOfUniversityRepo unitOfUniversityRepo;
+
+
+    public UnitOfUniversityDto save(UnitOfUniversityDto unitOfUniversityDto) {
+        return convertUnitOfUniversityModelToUnitOfUniversityDto(unitOfUniversityRepo.save(convertUnitOfUniversityDtoToUnitOfUniversityModel(unitOfUniversityDto)));
+    }
+
+    public UnitOfUniversityDto update(UnitOfUniversityDto unitOfUniversityDto) {
+        return convertUnitOfUniversityModelToUnitOfUniversityDto(unitOfUniversityRepo.save(convertUnitOfUniversityDtoToUnitOfUniversityModel(unitOfUniversityDto)));
+    }
+
+    public UnitOfUniversityDto findById(Long id) {
+        return convertUnitOfUniversityModelToUnitOfUniversityDto(unitOfUniversityRepo.findById(id).orElseThrow(() ->
+                new RuntimeException("not found  Unit Of university by this id : " + id)));
+    }
+
+    public List<UnitOfUniversityDto> findAll() {
+        return unitOfUniversityRepo.findAll().stream().map(this::convertUnitOfUniversityModelToUnitOfUniversityDto).toList();
+    }
+
+//    public UnitOfUniversityDto findByName(String name) {
+//        return convertUnitOfUniversityModelToUnitOfUniversityDto(unitOfUniversityRepo.findByName(name));
+////        .orElseThrow(() ->
+////                new RuntimeException("not found Unit Of university by this name : " + nameOfUnit))
+//    }
+
+
+
+
+
+
 
     public UnitOfUniversityDto convertUnitOfUniversityModelToUnitOfUniversityDto(UnitOfUniversity unitOfUniversity) {
 

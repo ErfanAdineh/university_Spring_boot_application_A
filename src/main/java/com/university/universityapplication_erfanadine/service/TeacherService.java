@@ -7,6 +7,7 @@ import com.university.universityapplication_erfanadine.entity.Teacher;
 import com.university.universityapplication_erfanadine.entity.UnitOfUniversity;
 import com.university.universityapplication_erfanadine.repository.FoodWeekRepo;
 import com.university.universityapplication_erfanadine.repository.LessonRepo;
+import com.university.universityapplication_erfanadine.repository.TeacherRepo;
 import com.university.universityapplication_erfanadine.repository.UnitOfUniversityRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,6 +27,32 @@ public class TeacherService {
 
     @Autowired
     private UnitOfUniversityRepo unitOfUniversityRepo;
+
+
+
+    @Autowired
+    public TeacherRepo teacherRepo;
+
+    public TeacherDto save(TeacherDto lessonDto) {
+        return convertTeacherModelToTeacherDto(teacherRepo.save(convertTeacherDtoToTeacherModel(lessonDto)));
+    }
+
+    public TeacherDto update(TeacherDto lessonDto) {
+        return convertTeacherModelToTeacherDto(teacherRepo.save(convertTeacherDtoToTeacherModel(lessonDto)));
+    }
+
+    public TeacherDto findById(Long id) {
+        return convertTeacherModelToTeacherDto(teacherRepo.findById(id).orElseThrow(() ->
+                new RuntimeException("not found teacher by this id : " + id)));
+    }
+
+    public TeacherDto findByName(String firstName, String lastName) {
+        return convertTeacherModelToTeacherDto(teacherRepo.findByFirstNameAndLastName(firstName, lastName));
+//        .orElseThrow(() ->
+//                new RuntimeException("not found teacher by this full firstName : " + firstName + " lastName : " + lastName))
+    }
+
+
 
     public TeacherDto convertTeacherModelToTeacherDto(Teacher teacher) {
 

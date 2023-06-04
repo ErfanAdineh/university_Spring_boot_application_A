@@ -12,7 +12,7 @@ import java.util.List;
 @Getter
 public class Lesson extends BaseEntity {
 
-    private String NameOfCourse;
+    private String nameOfCourse;
     private Integer universityCourseUnit;
 
     @ManyToMany(mappedBy = "lessons",cascade = CascadeType.DETACH)
